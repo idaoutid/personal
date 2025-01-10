@@ -1,0 +1,22 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Article Page</title>
+</head>
+<body>
+    <form method="post" onsubmit="return false;">
+        <textarea id="article" rows="20" cols="80" placeholder="Paste full article here"></textarea>
+        <button onclick="displayArticle()">Generate Article</button>
+    </form>
+    <div id="output" style="margin-top:20px; border:1px solid #ccc; padding:10px;"></div>
+
+    <script>
+        function displayArticle() {
+            const article = document.getElementById('article').value;
+            const output = document.getElementById('output');
+            output.innerHTML = article.replace(/\n/g, '<br>');
+        }
+    </script>
+</body>
+</html>
